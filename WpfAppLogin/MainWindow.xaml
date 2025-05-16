@@ -1,0 +1,115 @@
+﻿<Window x:Class="WpfAppLogin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppLogin"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" FontSize="30" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Row="0" Grid.Column="0">
+            <TextBlock FontSize="24">Отзывы на техподдержку</TextBlock>
+            <ListBoxItem Margin="10,0,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="22">Дёмин Александр Ильич</TextBlock>
+                    <TextBlock FontSize="14">До него смогли дозвониться</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Margin="10,0,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="22">Павлов Анатолий Кинделевич</TextBlock>
+                    <TextBlock FontSize="14">Смог дозвониться до техподдержки за 7 минут</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Margin="10,0,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="22">Харитонов Шамиль Ереванович</TextBlock>
+                    <TextBlock FontSize="14">Не дозвонился, но решил всё сам</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+
+        <ListBox Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock>Логин:</TextBlock>
+                    <TextBox >login_user</TextBox>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock>Пароль:</TextBlock>
+                    <PasswordBox></PasswordBox>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock>Подтвердить пароль:</TextBlock>
+                    <PasswordBox PasswordChar="#" ></PasswordBox>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock>Должность:</TextBlock>
+                    <ComboBox>
+                        <ComboBoxItem IsSelected="True">
+                            <TextBlock>Администратор</TextBlock>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock>Уборщик</TextBlock>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock>Сантехник</TextBlock>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock>Водитель</TextBlock>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock>Менеджер</TextBlock>
+                        </ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock>Коментарий:</TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow">Это очень информативный комментарий про сотрудника. Это очень информативный комментарий про сотрудника. Это очень информативный комментарий про сотрудника. </TextBlock>
+                </StackPanel>
+                
+            </ListBoxItem>
+        </ListBox>
+        
+        <ListBox Grid.Row="0" Grid.Column="2">
+            <TextBlock FontSize="24">Техническая поддержка</TextBlock>
+            <ListBoxItem Margin="10,0,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="22">Дёмин Александр Ильич</TextBlock>
+                    <TextBlock FontSize="14">+7 (902) 865-98-66</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Margin="10,0,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="22">Жар Агон Адович</TextBlock>
+                    <TextBlock FontSize="14">+7 (956) 785-87-21</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Margin="10,0,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="22">Запальнов Роман Никитич</TextBlock>
+                    <TextBlock FontSize="14">+7 (960) 464-78-30</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+
+    </Grid>
+</Window>
