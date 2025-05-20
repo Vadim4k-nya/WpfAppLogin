@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppLogin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontSize="30" WindowState="Maximized">
+        Title="Регистрация" Height="450" Width="800" FontSize="30" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -17,7 +17,8 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Grid.Row="0" Grid.Column="0">
+
+        <ListBox Grid.Row="0" Grid.Column="0" BorderBrush="White">
             <TextBlock FontSize="24">Отзывы на техподдержку</TextBlock>
             <ListBoxItem Margin="10,0,0,0">
                 <StackPanel>
@@ -39,57 +40,80 @@
             </ListBoxItem>
         </ListBox>
 
-        <ListBox Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
-            <ListBoxItem>
-                <StackPanel>
-                    <TextBlock>Логин:</TextBlock>
-                    <TextBox >login_user</TextBox>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel>
-                    <TextBlock>Пароль:</TextBlock>
-                    <PasswordBox></PasswordBox>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel>
-                    <TextBlock>Подтвердить пароль:</TextBlock>
-                    <PasswordBox PasswordChar="#" ></PasswordBox>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel>
-                    <TextBlock>Должность:</TextBlock>
-                    <ComboBox>
-                        <ComboBoxItem IsSelected="True">
-                            <TextBlock>Администратор</TextBlock>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <TextBlock>Уборщик</TextBlock>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <TextBlock>Сантехник</TextBlock>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <TextBlock>Водитель</TextBlock>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <TextBlock>Менеджер</TextBlock>
-                        </ComboBoxItem>
-                    </ComboBox>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ListBox Grid.Row="0" HorizontalContentAlignment="Stretch" BorderBrush="White">
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock>Логин:</TextBlock>
+                            <TextBox>Login</TextBox>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock>Пароль:</TextBlock>
+                            <PasswordBox></PasswordBox>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock>Подтвердить пароль:</TextBlock>
+                            <PasswordBox PasswordChar="#" ></PasswordBox>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock>Должность:</TextBlock>
+                            <ComboBox>
+                                <ComboBoxItem IsSelected="True">
+                                    <TextBlock>Администратор</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>Уборщик</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>Сантехник</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>Водитель</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>Менеджер</TextBlock>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+                <StackPanel Grid.Row="1" Margin="5">
                     <TextBlock>Коментарий:</TextBlock>
-                    <TextBlock TextWrapping="WrapWithOverflow">Это очень информативный комментарий про сотрудника. Это очень информативный комментарий про сотрудника. Это очень информативный комментарий про сотрудника. </TextBlock>
+                    <TextBox MaxLines="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"
+                             Text="Это очень иформативвный комментарий про сотрудника. Это очень иформативвный комментарий про сотрудника. Это очень иформативвный комментарий про сотрудника. Это очень иформативвный комментарий про сотрудника. Это очень иформативвный комментарий про сотрудника. 
+                             "/>
                 </StackPanel>
                 
-            </ListBoxItem>
-        </ListBox>
-        
-        <ListBox Grid.Row="0" Grid.Column="2">
+                
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Зарегестритовать" Background="#FF5AA56C" Margin="15"/>
+                <Button Grid.Column="1" Content="Отменить" Background="#FFC85B5B" Margin="15"/>
+            </Grid>
+
+        </Grid>
+
+        <ListBox Grid.Row="0" Grid.Column="2" BorderBrush="White">
             <TextBlock FontSize="24">Техническая поддержка</TextBlock>
             <ListBoxItem Margin="10,0,0,0">
                 <StackPanel>
@@ -111,5 +135,6 @@
             </ListBoxItem>
         </ListBox>
 
+        
     </Grid>
 </Window>
